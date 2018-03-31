@@ -1,0 +1,2 @@
+# eosnow
+CREDIT SMART CONTRACT ON EOS
