@@ -1,5 +1,5 @@
 # eosnow
-**CREDIT SMART CONTRACT ON EOS**
+**CREDIT SMART CONTRACT AND SMART WALLET**
 
 
 
@@ -9,3 +9,5 @@
 
 </p>
 
+
+wait...
