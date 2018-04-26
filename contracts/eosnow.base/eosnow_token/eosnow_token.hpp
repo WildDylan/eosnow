@@ -11,25 +11,6 @@ using std::string;
 
 class token : public contract {
 public:
-    token( account_name self ):contract(self){}
-
-    /// @abi action
-    void init( asset maximum_supply );
-
-    /// @abi action
-    bool find( account_name name );
-
-    /// @abi action
-    void generate( account_name name );
-
-    /// @abi action
-    void issue( account_name to, asset quantity );
-
-    /// @abi action
-    void transfer( account_name from, account_name to, asset price );
-
-
-private:
     enum orderStatus {
         WAIT_PAY = 0,
         WAIT_SEND_PRODUCT = 1,
@@ -81,4 +62,21 @@ private:
     std::vector<Order> orders;
 
     typedef eosio::multi_index<N(accounts), Account> accs;
+
+    token( account_name self ):contract(self){}
+
+    /// @abi action
+    void init( asset maximum_supply );
+
+    /// @abi action
+    bool find( account_name name );
+
+    /// @abi action
+    void generate( account_name name );
+
+    /// @abi action
+    void issue( account_name to, asset quantity );
+
+    /// @abi action
+    void transfer( account_name from, account_name to, asset price );
 };
