@@ -76,3 +76,18 @@ void eosnow::score( account_name rater, uint64_t id, uint64_t score ) {
 
     print("Rate success!");
 }
+
+void eosnow::price( uint64_t id, asset price ) {
+    nows now_table(_self, _self);
+
+    auto it = now_table.find( id );
+    eosio_assert( it != now_table.end(), "`now` with the id not found" );
+
+    require_auth(it->owner);
+
+    now_table.modify(now_table.get( id ), 0, [&]( auto& m_now ) {
+        m_now.price = price;
+    });
+
+    print("Price success!");
+}

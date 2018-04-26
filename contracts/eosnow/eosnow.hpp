@@ -27,6 +27,9 @@ public:
     /// @abi action
     void score( account_name rater, uint64_t id, uint64_t score );
 
+    /// @abi action
+    void price( uint64_t id, asset price );
+
 private:
     static uint64_t id;
 
@@ -78,4 +81,4 @@ private:
     typedef multi_index<N(now), now> nows;
 };
 
-EOSIO_ABI(eosnow, (create)(give)(remove)(score))
+EOSIO_ABI(eosnow, (create)(give)(remove)(score)(price))
