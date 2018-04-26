@@ -1,5 +1,5 @@
 # eosnow
-**SMART WALLET**
+**ARTICLE IN BLOCK CHAIN**
 
 <p align="center">
 
